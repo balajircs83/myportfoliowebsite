@@ -340,8 +340,40 @@ Section Styles */
     background: #f5f5f5;
 }
 
+/* Override for section-alt */
+.section.section-alt {
+    background: #ffffff !important;
+}
+
 .section-alt {
     background: #fff;
+}
+
+/* Clients Section - Force White Background */
+#clients.section-alt {
+    background: #fff !important;
+}
+
+section#clients.section.section-alt {
+    background: #ffffff !important;
+}
+
+/* Additional specificity for clients section */
+section#clients {
+    background: #ffffff !important;
+}
+
+#clients {
+    background: #ffffff !important;
+}
+
+/* Force white background with highest specificity */
+html body section#clients.section.section-alt {
+    background: #ffffff !important;
+}
+
+html body #clients {
+    background: #ffffff !important;
 }
 
 .section-header {
@@ -1006,10 +1038,10 @@ roject Detail Page Styles */
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: 191px;
-    top: 20px;
-    width: 20px;
-    height: 20px;
+    left: 195px;
+    top: 24px;
+    width: 12px;
+    height: 12px;
     background: #333;
     border-radius: 50%;
     z-index: 2;
@@ -1249,7 +1281,6 @@ roject Detail Page Styles */
 }/* 
 Clients Section */
 .clients-section {
-    background: white;
     padding: 4rem 0;
 }
 
@@ -1379,4 +1410,380 @@ Clients Section */
     .client-logo {
         font-size: 13px;
     }
+}
+/* Contact Footer Section */
+section#contact.contact-footer {
+    background: #8FA68E !important;
+    padding: 2rem 0 !important;
+    color: white !important;
+    min-height: auto !important;
+}
+
+section.contact-footer {
+    background: #8FA68E !important;
+    padding: 2rem 0 !important;
+    color: white !important;
+    min-height: auto !important;
+}
+
+.contact-footer {
+    background: #8FA68E !important;
+    padding: 2rem 0 !important;
+    color: white !important;
+}
+
+.contact-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Left Side - Navigation Menu */
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-nav-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-nav-link:hover {
+    opacity: 0.7;
+}
+
+/* Center - Name and Description */
+.footer-center {
+    text-align: center;
+}
+
+.footer-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.footer-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.footer-location {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+/* Right Side - Social Icons and Contact */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5rem;
+}
+
+.footer-connect {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.social-text a {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.social-text a:hover {
+    opacity: 0.8;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.contact-me-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-me-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Responsive Design for Contact Footer */
+@media (max-width: 768px) {
+    .contact-footer-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .footer-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .footer-right {
+        align-items: center;
+    }
+    
+    .footer-name {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-footer {
+        padding: 3rem 0;
+    }
+    
+    .contact-footer-container {
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .footer-nav {
+        gap: 1rem;
+    }
+    
+    .footer-nav-link {
+        font-size: 12px;
+    }
+    
+    .footer-name {
+        font-size: 1.5rem;
+    }
+    
+    .footer-description,
+    .footer-location {
+        font-size: 14px;
+    }
+}/* 
+Copyright Footer */
+.copyright-footer {
+    background: #8FA68E;
+    padding: 1rem 0;
+    color: white;
+}
+
+.copyright-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.copyright-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Responsive Design for Copyright Footer */
+@media (max-width: 768px) {
+    .copyright-footer {
+        padding: 0.75rem 0;
+    }
+    
+    .copyright-container {
+        padding: 0 1rem;
+    }
+    
+    .copyright-text {
+        font-size: 12px;
+    }
+}/* Final
+ fix for clients section white background */
+body section#clients.section.section-alt,
+html body section#clients.section.section-alt,
+section#clients.section.section-alt {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+}
+
+/* Override any potential container background */
+#clients .container,
+#clients.section .container,
+#clients.section-alt .container {
+    background: transparent !important;
+}
+
+/* Ensure section-alt class works properly */
+.section.section-alt {
+    background: #ffffff !important;
+}/* CR
+ITICAL FIX: Force clients section white background */
+#clients {
+    background: white !important;
+}
+
+section#clients {
+    background: white !important;
+}
+
+.section-alt {
+    background: white !important;
+}
+
+#clients.section-alt {
+    background: white !important;
+}
+
+section#clients.section-alt {
+    background: white !important;
+}/*
+ ULTIMATE FIX: Clients section white background - highest priority */
+section[id="clients"] {
+    background: white !important;
+    background-color: white !important;
+}
+
+section[id="clients"].section {
+    background: white !important;
+    background-color: white !important;
+}
+
+section[id="clients"].section.section-alt {
+    background: white !important;
+    background-color: white !important;
+}
+
+/* Force all section-alt to be white */
+.section-alt,
+section.section-alt {
+    background: white !important;
+    background-color: white !important;
+}/* Clien
+ts White Background - Custom Class */
+.clients-white-bg {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    padding: 100px 0 !important;
+}
+
+/* Ensure clients section has white background with highest specificity */
+section.clients-white-bg {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    padding: 100px 0 !important;
+}
+
+section#clients.clients-white-bg {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    padding: 100px 0 !important;
+}
+
+/* Responsive padding for clients section */
+@media (max-width: 768px) {
+    .clients-white-bg,
+    section.clients-white-bg,
+    section#clients.clients-white-bg {
+        padding: 60px 0 !important;
+    }
+}/* FIN
+AL FIX: Clients section white background - Override all conflicts */
+section#clients.section.section-alt {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+}
+
+/* Ensure section-alt always has white background */
+.section-alt {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+}
+
+/* Remove any potential background from clients-specific styles */
+.clients-section {
+    background: transparent !important;
+}/
+* Fix spacing for clients section */
+#clients.section,
+#clients.section-alt,
+section#clients.section.section-alt {
+    padding: 60px 0 !important;
 }
